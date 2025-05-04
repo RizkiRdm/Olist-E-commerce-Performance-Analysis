@@ -1,0 +1,10 @@
+# Customer Segmentation For Churn Prediction
+
+## Key point
+- Segmentasi Bikin Prediksi Makin Akurat: Bayangin gini, lu mau prediksi siapa aja yang bakal churn (berhenti jadi pelanggan). Kalo lu pukul rata semua pelanggan, hasilnya pasti kurang akurat. Nah, dengan segmentasi, lu bisa ngelompokkin pelanggan berdasarkan karakteristik atau perilaku mereka. Misalnya, ada segmen pelanggan yang sering beli produk mahal, ada yang cuma beli pas diskon, ada yang aktif banget di media sosial, dan lain-lain. Nah, tiap segmen ini punya kecenderungan churn yang beda-beda. Jadi, prediksi lu bakal jauh lebih precise dan nggak ngasal kayak nebak isi dompet mantan. 😜
+
+- Strategi Retensi Lebih Tertarget: Setelah lu tau segmen mana aja yang rawan churn, lu bisa bikin strategi retensi yang lebih spesifik buat tiap segmen. Misalnya, pelanggan setia yang udah lama banget sama lu, jangan sampe dikasih treatment yang sama kayak pelanggan baru yang baru nyoba-nyoba. Lu bisa kasih loyalty program khusus, diskon eksklusif, atau personal touch lainnya. Intinya, lu jadi tau cara ngerayu tiap tipe pelanggan biar nggak kabur ke kompetitor. Kayak PDKT aja, tiap orang beda cara ngerayunya, kan? 😉
+
+- Prioritas Sumber Daya: Daripada buang-buang energi buat ngejarin semua pelanggan biar nggak churn, mendingan fokus ke segmen yang paling berharga dan paling mungkin buat diselametin. Ini lebih efisien dan hemat budget, bro! Ibaratnya, daripada nyiram semua tanaman di kebon, mendingan siram yang udah keliatan layu duluan. 
+
+Intinya sih, gabungin Customer Segmentation sama Churn Prediction itu kayak ngasih turbo boost buat proyek analisis data lu. Lu nggak cuma tau siapa aja yang mungkin churn, tapi lu juga tau kenapa mereka mungkin churn (berdasarkan segmennya) dan gimana cara paling efektif buat nahan mereka.
