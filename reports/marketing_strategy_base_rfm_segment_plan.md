@@ -3,7 +3,6 @@
 This report outlines targeted marketing strategies for each identified RFM segment, leveraging insights from product preferences, geographical distribution, payment methods, delivery times, and average product prices.
 
 
-
 ## 1. Executive Summary
 
 Our RFM analysis has categorized customers into distinct segments based on their Recency, Frequency, and Monetary value. By combining these segments with behavioral data (product categories, location, payment, delivery, and price), we have developed tailored strategies to optimize customer engagement, retention, and lifetime value.
