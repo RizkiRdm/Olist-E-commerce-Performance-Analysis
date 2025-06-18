@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import datetime
 
 # import data loader
 from src.data_loader import load_all_data
@@ -30,6 +31,45 @@ rfm_delivery_performance_summary_df = dashboard_data.get(
     "rfm_delivery_performance_summary"
 )
 seller_performance_summary_df = dashboard_data.get("seller_performance_summary")
+
+# sidebar for filter data
+st.sidebar.header("Filter data")
+
+# time range filter
+st.sidebar.subheader("Time Range Filter")
+if not monthly_sales_summary_df.empty:
+    min_date = monthly_sales_summary_df["month_year"].min().date()
+    max_date = monthly_sales_summary_df["month_year"].max().date()
+
+    default_date_ts = pd.Timestamp(max_date) - pd.DateOffset(months=11)
+    default_date = default_date_ts.date()
+
+    if default_date < min_date:
+        default_date = min_date
+
+    # Input tanggal dari Streamlit (selalu mengembalikan datetime.date)
+    selected_start_date = st.sidebar.date_input(
+        "Start Date", min_value=min_date, max_value=max_date, value=default_date
+    )
+
+    selected_end_date = st.sidebar.date_input(
+        "End Date", min_value=min_date, max_value=max_date, value=max_date
+    )
+
+    # Validasi dan penanganan error
+    if selected_start_date > selected_end_date:
+        st.sidebar.error("Tanggal mulai tidak boleh setelah tanggal selesai.")
+        selected_start_date = default_date
+        selected_end_date = max_date
+
+    # Filter data: Bandingkan kolom .dt.date (datetime.date) dengan objek datetime.date dari input
+    filtered_monthly_sales_summary_df = monthly_sales_summary_df[
+        (monthly_sales_summary_df["month_year"].dt.date >= selected_start_date)
+        & (monthly_sales_summary_df["month_year"].dt.date <= selected_end_date)
+    ]
+else:
+    st.sidebar.warning("Monthly Date not Available for Time Filter")
+    monthly_sales_summary_df = pd.DataFrame
 
 tab1, tab2, tab3, tab4 = st.tabs(
     [
@@ -78,7 +118,7 @@ with tab1:
 
     # monthly total revenue trend
     fig_revenue_trend = px.line(
-        monthly_sales_summary_df,
+        filtered_monthly_sales_summary_df,
         x="month_year",
         y="total_revenue",
         title="Trend Total Revenue Monthly Product",
@@ -90,7 +130,7 @@ with tab1:
 
     # monthly total order trend
     fig_revenue_trend = px.line(
-        monthly_sales_summary_df,
+        filtered_monthly_sales_summary_df,
         x="month_year",
         y="total_orders",
         title="Trend Total Orders Monthly Product",
@@ -330,8 +370,13 @@ with tab3:
             st.plotly_chart(fig_detail_customer_states, use_container_width=True)
 
     st.subheader("Delivery Performance per Segment")
+    filtered_rfm_delivery_performance_summary_df = rfm_delivery_performance_summary_df[
+        rfm_delivery_performance_summary_df["RFM_segment"].isin(
+            customer_rfm_segments_df["RFM_segment"].unique()
+        )
+    ]
     fig_rfm_delivery_performace = px.bar(
-        rfm_delivery_performance_summary_df.melt(
+        filtered_rfm_delivery_performance_summary_df.melt(
             id_vars="RFM_segment", var_name="Metric", value_name="Value"
         ),
         x="RFM_segment",
