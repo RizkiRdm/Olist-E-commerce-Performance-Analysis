@@ -43,9 +43,105 @@ The project's analytical framework prioritizes modularity and efficiency, ensuri
 
 ### 4.1. Project Structure
 
-(Keep your existing project structure diagram/description here, if any specific image for it is available)
-
-![[architecture_diagram.png]]
+```bash
+Olist-E-commerce-Performance-Analysis
+├── assets
+│   ├── post_1.jpg
+│   ├── post_2.jpg
+│   ├── post_3.jpg
+│   └── post_4.jpg
+├── dashboard
+│   ├── app.py
+│   ├── data
+│   │   ├── dashboard_avg_freight_by_state.csv
+│   │   ├── dashboard_customer_rfm_segments.csv
+│   │   ├── dashboard_daily_patterns.csv
+│   │   ├── dashboard_delivery_performance_summary.csv
+│   │   ├── dashboard_delivery_time_distribution.csv
+│   │   ├── dashboard_hourly_patterns.csv
+│   │   ├── dashboard_monthly_sales_summary.csv
+│   │   ├── dashboard_order_status_distribution.csv
+│   │   ├── dashboard_rfm_customer_state_counts.csv
+│   │   ├── dashboard_rfm_delivery_performance_summary.csv
+│   │   ├── dashboard_rfm_payment_type_counts.csv
+│   │   ├── dashboard_rfm_product_category_counts.csv
+│   │   ├── dashboard_seller_performance_summary.csv
+│   │   └── olist_ecom.parquet
+│   └── src
+│       ├── data_loader.py
+│       ├── __init__.py
+│       └── __pycache__
+│           ├── data_loader.cpython-312.pyc
+│           └── __init__.cpython-312.pyc
+├── data
+│   ├── dashboard_data
+│   │   ├── customer_insight_RFM_analysis_data
+│   │   │   ├── dashboard_customer_rfm_segments.csv
+│   │   │   ├── dashboard_rfm_customer_state_counts.csv
+│   │   │   ├── dashboard_rfm_delivery_performance_summary.csv
+│   │   │   ├── dashboard_rfm_payment_type_counts.csv
+│   │   │   ├── dashboard_rfm_product_category_counts.csv
+│   │   │   └── dashboard_seller_performance_summary.csv
+│   │   └── overview_and_sales_order_performance_dataset
+│   │       ├── dashboard_avg_freight_by_state.csv
+│   │       ├── dashboard_daily_patterns.csv
+│   │       ├── dashboard_delivery_performance_summary.csv
+│   │       ├── dashboard_delivery_time_distribution.csv
+│   │       ├── dashboard_hourly_patterns.csv
+│   │       └── dashboard_monthly_sales_summary.csv
+│   └── olist_ecom.parquet
+├── dataset
+│   ├── customer_data_dirty.csv
+│   ├── geolocation_dirty.csv
+│   ├── order_item_dirty.csv
+│   ├── order_payment_dirty.csv
+│   ├── order_review_dirty.csv
+│   ├── orders_dataset_dirty.csv
+│   ├── product_category.csv
+│   ├── products_dirty.csv
+│   └── seller_dirty.csv
+├── notebooks
+│   ├── customer_analysis.ipynb
+│   ├── data_cleaning.ipynb
+│   ├── data_exploration.ipynb
+│   ├── dirty_data.ipynb
+│   ├── feature_engineering.ipynb
+│   ├── prepare_data_for_dashboard.ipynb
+│   ├── sales_and_order_analysis.ipynb
+│   └── seller_analysis.ipynb
+├── README.md
+├── reports
+│   ├── Comprehensive Report_ Olist E-commerce Sales and Order Analysis.pdf
+│   ├── figures
+│   │   ├── plot_1.png
+│   │   ├── plot_2.png
+│   │   ├── plot_3.png
+│   │   ├── plot_4.png
+│   │   ├── plot_5.png
+│   │   ├── plot_6.png
+│   │   ├── plot_7.png
+│   │   ├── plot_8.png
+│   │   └── plot_9.png
+│   ├── Olist Seller Performance Analysis Report.pdf
+│   ├── RFM Analysis Report_ Customer Segmentation and Behavioral Insights.pdf
+│   ├── sales_plot
+│   │   ├── 1.png
+│   │   ├── 2.png
+│   │   ├── 3.png
+│   │   ├── 4.png
+│   │   ├── 5.png
+│   │   ├── 6.png
+│   │   ├── 7.png
+│   │   ├── 8.png
+│   │   └── 9.png
+│   └── sellers_plot
+│       ├── orders_vs_delivery_time.png
+│       ├── orders_vs_delivery_vs_estimate.png
+│       ├── top_10_sellers_orders.png
+│       └── top_10_sellers_revenue.png
+└── requirements.txt
+```
+_note: this is my project structure_
 
 ### 4.2. Data Processing & Analysis Pipeline
 
