@@ -225,14 +225,14 @@ This tab evaluates the health of Olist's seller ecosystem.
 
 - Top Sellers by Revenue & Order Volume identify crucial contributors, such as a top seller generating ~R$20,000 in revenue (4869f7a5dfa277a7dca6462dcf3b52b2) and another processing over 150 orders (4a3ca9315b744ce9f8e9374361493884). These "star sellers" are vital for platform stability.
     
-    ![Top Seller Revenue by ](reports/sellers_plot/top_10_sellers_revenue.png)  
-    ![Top Seller Order Revenue by ](reports/sellers_plot/top_10_seller_orders.png)
+    ![Top Seller Revenue](reports/sellers_plot/top_10_sellers_revenue.png)  
+    ![Top Seller Order Revenue](reports/sellers_plot/top_10_sellers_orders.png)
     
 - The Seller Delivery Efficiency analysis, through scatter plots of total orders, revenue, and average delivery times, conclusively demonstrates that the majority of sellers consistently delivered orders ahead of their estimated dates. This indicates strong seller adherence to logistical expectations, shifting the focus of operational debt away from seller-side delays.
 
     ![Orders vs Delivery vs Estimate Chart](reports/sellers_plot/orders_vs_delivery_vs_estimate.png)
     
-    ![Top Seller Order Revenue by ](reports/sellers_plot/orders_vs_delivery_time.png)  
+    ![Orders vs Delivery Time chart](reports/sellers_plot/orders_vs_delivery_time.png)  
     
 
 ### Interactive Filters: Empowering Deeper Exploration
